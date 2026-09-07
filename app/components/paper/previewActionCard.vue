@@ -8,8 +8,14 @@
         class="d-flex flex-column align-center justify-center ga-1 primary-gray-700 cursor-pointer text-no-wrap"
       >
         <v-icon color="primary-gray-700">
-          md:stacks
+          md:contract
         </v-icon>
+        <v-tooltip
+          activator="parent"
+          location="top"
+        >
+          Number of pages
+        </v-tooltip>
         {{ qFilePages }}
       </div>
       <div
@@ -19,6 +25,12 @@
         <v-icon color="primary-gray-700">
           md:visibility
         </v-icon>
+        <v-tooltip
+          activator="parent"
+          location="top"
+        >
+          Views
+        </v-tooltip>
         {{ views }}
       </div>
       <div
@@ -28,6 +40,12 @@
         <v-icon color="primary-gray-700">
           md:star
         </v-icon>
+        <v-tooltip
+          activator="parent"
+          location="top"
+        >
+          Rating
+        </v-tooltip>
         {{ score }}
       </div>
       <div
@@ -37,6 +55,12 @@
         <v-icon color="primary-gray-700">
           md:bookmark_outlined
         </v-icon>
+        <v-tooltip
+          activator="parent"
+          location="top"
+        >
+          Bookmark
+        </v-tooltip>
       </div>
       <div
         v-if="hasShare"
@@ -46,6 +70,12 @@
         <v-icon color="primary-gray-700">
           md:share
         </v-icon>
+        <v-tooltip
+          activator="parent"
+          location="top"
+        >
+          Share
+        </v-tooltip>
       </div>
     </div>
 
@@ -69,6 +99,12 @@
         <v-icon color="white">
           md:crop_free
         </v-icon>
+        <v-tooltip
+          activator="parent"
+          location="top"
+        >
+          Full preview
+        </v-tooltip>
       </div>
     </div>
 
