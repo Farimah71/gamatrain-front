@@ -4,6 +4,15 @@
       class="button-div h-100 d-flex flex-column align-center justify-center ga-8 px-4"
     >
       <div
+        v-if="qFilePages"
+        class="d-flex flex-column align-center justify-center ga-1 primary-gray-700 cursor-pointer text-no-wrap"
+      >
+        <v-icon color="primary-gray-700">
+          md:stacks
+        </v-icon>
+        {{ qFilePages }}
+      </div>
+      <div
         v-if="views"
         class="d-flex flex-column align-center justify-center ga-1 primary-gray-700 cursor-pointer text-no-wrap"
       >
@@ -28,7 +37,6 @@
         <v-icon color="primary-gray-700">
           md:bookmark_outlined
         </v-icon>
-        Save
       </div>
       <div
         v-if="hasShare"
@@ -38,7 +46,6 @@
         <v-icon color="primary-gray-700">
           md:share
         </v-icon>
-        Share
       </div>
     </div>
 
@@ -86,6 +93,7 @@ interface IPreviewActionCard {
   alt: string
   views?: number | string
   score?: string | number
+  qFilePages?: string | number
   hasShare?: boolean
   hasSave?: boolean
 }
